@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Apply for Personal Independence Payment (PIP)
+      </h1>
+
+     
+
+      <p class="govuk-body">Use this service to:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>make an application for PIP</li>
+  <li>describe how your health conditions or disabilities affect your ability to do certain everyday tasks and get around</li>
+  <li>upload any supporting evidence you have of your conditions or disabilities and how they affect you</li>
+</ul>
+
+<h2 class="govuk-heading-m">
+Before you start      </h2>
+
+      <p>
+You do not have to answer all the questions in one go. You can save your progress at any point and continue later.
+      </p>
+
+      <p>The date you submit this first stage will be the date of claim. The sooner you do this, the earlier your payments could begin if you're awarded PIP.</p>
+
+      <p class="govuk-body">For the first stage you will need:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>your personal details including National Insurance number</li>
+  <li>your bank or building society account details, if you have one</li>
+  <li>details of your health and care professionals</li>
+  <li>hospital or care home details if you're staying or living in one</li>
+</ul>
+    </div>
+  </div>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "health-care-professionals-questions"
+}) }}
+
+{% endblock %}

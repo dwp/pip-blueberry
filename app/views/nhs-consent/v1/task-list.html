@@ -1,0 +1,184 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Task list template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Tell us how your health condition or disability affects you</h1>
+
+
+      <p>Download and read the instructions Help with answering questions and providing evidence (PDF)</p>
+
+      <p>You can download a copy of your completed application when you've finished.</p>
+
+      <h2 class="govuk-heading-m">Tell us about your health</h2>
+
+      {% set completedStatus = {
+        text: "Completed"
+      } %}
+
+      {% set incompleteStatus = {
+        tag: {
+          text: "Incomplete",
+          classes: "govuk-tag--blue"
+        }
+      } %}
+
+      {# To switch between the completed and incomplete statues, use some inline logic within the component below, like this: "status: (completedStatus if ... else incompleteStatus)" #}
+
+      {{ govukTaskList({
+        idPrefix: "first-section",
+        items: [
+          {
+            title: {
+              text: "About your health"
+            },
+            href: "#",
+            status: completedStatus
+          },
+          {
+            title: {
+              text: "About your health or care professionals"
+            },
+            href: "#",
+            status: completedStatus
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-5">Tell us about your daily living activities</h2>
+
+      {{ govukTaskList({
+        idPrefix: "second-section",
+        items: [
+          {
+            title: {
+              text: "Preparing food"
+            },
+            href: "activities/preparing-food",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Eating and drinking"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Managing treatments"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Washing and bathing"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Using the toilet and managing incontinence"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Dressing and undressing"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Talking, listening and understanding"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Reading"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Mixing with other people"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Managing money"
+            },
+            href: "#",
+            status: incompleteStatus
+          }
+        ]
+      }) }}
+
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-5">Tell us about your mobility activities</h2>
+
+      {{ govukTaskList({
+        idPrefix: "third-section",
+        items: [
+          {
+            title: {
+              text: "Planning and following a journey"
+            },
+            href: "#",
+            status: incompleteStatus
+          },
+          {
+            title: {
+              text: "Moving around"
+            },
+            href: "#",
+            status: incompleteStatus
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-5">Tell us about anything else</h2>
+
+      {{ govukTaskList({
+        idPrefix: "fourth-section",
+        items: [
+          {
+            title: {
+              text: "Additional information"
+            },
+            href: "#",
+            status: completedStatus
+          },
+          {
+            title: {
+              text: "Upload supporting evidence and apply"
+            },
+            href: "#",
+            status: completedStatus
+          }
+        ]
+      }) }}
+
+      <div class="govuk-!-margin-top-5">
+        {{ govukButton({ text: "Submit your application", href: "#" }) }}
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
