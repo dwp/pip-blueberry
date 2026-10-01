@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Sharing information about your health conditions and disabilities to support your application 
+      </h1>
+
+      <p class="govuk-body">
+        The Department for Work and Pensions (DWP), or health professionals working on behalf of DWP, may need more information about:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your health conditions and disabilities and how they affect you</li>
+        <li>any medication you have been prescribed</li>
+      </ul>
+
+      <p class="govuk-body">
+        With your consent, we can get this information from:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>health professionals that you tell us about</li>
+        <li>your NHS record</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">How we use this information</h2>
+
+      <p class="govuk-body">
+        We will only ask for or look at information that is relevant to this application. We use it to:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>process your application</li>
+        <li>make a decision on your application and any mandatory reconsideration or appeal you make</li>
+      </ul>
+
+      <p class="govuk-body">
+        The law allows us to obtain, keep and use this information.
+      </p>
+
+      <p class="govuk-body">
+        DWP asks for your consent on behalf of your doctor or other relevant professionals you tell us about. This reassures your doctor and the others that
+      </p>
+     
+
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue",
+  href: "health-professional-consent"
+}) }}
+
+{% endblock %}
