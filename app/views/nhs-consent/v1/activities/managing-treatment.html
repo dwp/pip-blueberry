@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Question page template – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block containerStart %}
@@ -53,7 +53,8 @@ Tell us about the difficulties you have managing your treatments, and how you ma
           </div>
 
         {{ govukButton({
-          text: "Continue"
+          text: "Save and continue",
+          href: "../explain-end"
         }) }}
 
       </form>

@@ -1,5 +1,5 @@
 {
-  "serviceName": "Personal Independence Payment (PIP)",
+  "Personal Independence Payment (PIP)": "Personal Independence Payment (PIP)",
   "useServiceNavigation": true,
   "plugins": {
     "govuk-frontend": {

@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Start the test – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block containerStart %}
@@ -21,18 +21,18 @@
 
       {% call govukPanel({
         classes: "govuk-panel--interruption",
-        titleText: "Start of research",
+        titleText: "Start of test",
         actions: {
           items: [
             {
-              text: "Start research",
+              text: "Start the test",
               href: "before-you-start",
               type: "button"
             }
           ]
         }
       }) %}
-      <p class="govuk-body">We have skipped some steps in the prototype. In a real application you would be asked more questions about...</p>
+      <p class="govuk-body">We have skipped some steps in the test. In a real application you would be asked more questions about...</p>
 {% endcall %}
 
 {% endblock %}
