@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post">
+
+        <h1 class="govuk-heading-l">
+        Giving your consent 
+      </h1>
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "HcpNow",
+        fieldset: {
+          legend: {
+            text: "Do you give consent for DWP, or health professionals working on behalf of DWP, to access your NHS record to view relevant information about your health conditions and medication?",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }} 
+
+      {{ govukRadios({
+        name: "HcpNow",
+        fieldset: {
+          legend: {
+            text: "Do you give consent for DWP, or health professionals working on behalf of DWP, to access your NHS record to view relevant information about your health conditions and medication? ",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        hint: {
+          text: "Do you give consent for DWP, or health professionals working on behalf of DWP, to access your NHS record to view relevant information about your health conditions and medication? "
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }} 
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: "#"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
