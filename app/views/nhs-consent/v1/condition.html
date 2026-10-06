@@ -36,28 +36,24 @@
           classes: "govuk-label--m",
           isPageHeading: false
         },
-        hint: {
-          text: "Select from the suggestions or enter your own."
-        },
         id: "event-name",
         name: "eventName"
       }) }}
 
-      {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+      
 
-      {{ govukDateInput({
-        id: "passport-issued",
-        namePrefix: "passport-issued",
-        fieldset: {
-          legend: {
-            text: "Approximate start date",
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--m"
-          }
+      {{ govukInput({
+        label: {
+          text: "Approximate start date",
+          classes: "govuk-label--m",
+          isPageHeading: false
         },
         hint: {
           text: "For example, about 14 months ago."
-        }
+        },
+        classes: "govuk-!-width-one-half",
+        id: "event-name",
+        name: "eventName"
       }) }}
 
         {{ govukButton({

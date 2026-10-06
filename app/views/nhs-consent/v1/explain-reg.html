@@ -21,18 +21,18 @@
 
       {% call govukPanel({
         classes: "govuk-panel--interruption",
-        titleText: "Start",
+        titleText: "We have skipped to the next stage of the application",
         actions: {
           items: [
             {
-              text: "Start the test",
-              href: "before-you-start",
+              text: "Continue the test",
+              href: "health-care-professionals-questions",
               type: "button"
             }
           ]
         }
       }) %}
-      <!-- <p class="govuk-body"></p> -->
+      <p class="govuk-body">In a real application you would of been asked questions about your personal and contact details.</p>
 {% endcall %}
 
 {% endblock %}
