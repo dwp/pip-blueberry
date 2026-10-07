@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your main health or care professional
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "whereDoYouLive",
+        fieldset: {
+          legend: {
+            text: "What is their job or relationship to you?",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "gp",
+            text: "GP"
+          },
+          {
+            value: "scotland",
+            text: "Hospital doctor"
+          },
+          {
+            value: "wales",
+            text: "Specialist nurse"
+          }
+        ]
+      }) }}
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {{ govukInput({
+        label: {
+          text: "What is their full name?",
+          classes: "govuk-label--m",
+          isPageHeading: false
+        },
+        hint: {
+          text: "If the name is not known, enter their position or job title. For example, 'Duty GP'."
+        },
+        id: "event-name",
+        name: "eventName"
+      }) }}
+
+      {{ govukInput({
+        label: {
+          text: "What is their phone number?",
+          classes: "govuk-label--m",
+          isPageHeading: false
+        },
+        hint: {
+          text: "For example, 07700 900 982 or 01632 960 001."
+        },
+        id: "event-name",
+        name: "eventName"
+      }) }}
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: "explain-steps-reg-hig"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

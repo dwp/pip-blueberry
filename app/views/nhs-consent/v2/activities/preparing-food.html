@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Test instructions
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              You don't need to fill this in, just talk out loud and explain what you would enter.
+            </p>
+          </div>
+        </div>
+
+      <h1 class="govuk-heading-l">
+        Difficulties preparing food
+      </h1>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+      <p class="govuk-body">For each difficulty tell us:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>what the difficulty is</li>
+              <li>how often you have this difficulty – tell us about both good and bad days</li>
+              <li>why you have it, or how it relates to your condition</li>
+              <li>any aids or adaptations you use, or help you get from another person</li>
+              <li>about any help you feel you need but do not get</li>
+            </ul>
+
+        <div class="govuk-inset-text">
+          <h2 class="govuk-heading-m">
+            Examples
+          </h2>
+        
+          <p>"About twice a year, for about 3 weeks at a time I have difficulty remembering to turn the hob off because I get too distracted to complete tasks like this. My partner supervises me in the kitchen to make sure I stay safe."</p>       
+        
+          <p>"Every day, I have difficulty standing while preparing food because my leg is too stiff and painful. I need to use a perching stool so I can rest my leg while preparing food."</p>
+        </div>    
+
+        <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="5000">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="with-hint">
+              Tell us about the difficulties you have preparing food and how you manage them
+              </label>
+            </h1>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="15" aria-describedby="with-hint-info with-hint-hint"></textarea>
+            <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+              You can enter up to 5,000 characters
+            </div>
+          </div>
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: "../explain-end"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -21,7 +21,7 @@
       </h1>
 
       <p class="govuk-body">
-        The Department for Work and Pensions (DWP), or health professionals working on behalf of DWP, may need more information about:
+        The Department for Work and Pensions (DWP), or health professionals working on behalf of DWP, may need more information to understand:
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
@@ -30,40 +30,57 @@
       </ul>
 
       <p class="govuk-body">
-        With your consent, we can get this information from:
+        With your consent, NHS England and the health professionals you tell us about can share relevant information about you with DWP.   
       </p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>health professionals that you tell us about</li>
-        <li>your NHS record</li>
-      </ul>
+      <p class="govuk-body">
+        You do not have to give consent. Your application will continue if you choose not to. We will make a decision based on the information we have already and any additional information you provide. 
+      </p>
 
       <h2 class="govuk-heading-m">How we use this information</h2>
 
       <p class="govuk-body">
-        We will only ask for or look at information that is relevant to this application. We use it to:
+        We will only ask for information relevant to your current application. We use it to help us make a decision on it and any mandatory reconsideration or appeal you make. 
+      </p>
+
+      <p class="govuk-body">
+      DWP can lawfully ask your doctor, hospital or other relevant professionals for information about your health condition, and how it affects you, and use this information to support our assessment of your application. 
+      </p>
+      
+      <p class="govuk-body">
+      DWP asks for your consent on behalf of your health professionals so that they can legally share this information with DWP. 
+      </p>
+
+      <h2 class="govuk-heading-m">Changing your mind about your consent</h2>
+
+      <p class="govuk-body">
+        You can give or withdraw consent at any time by calling 0800 169 0310.  
+      </p>
+
+      <p class="govuk-body">
+        If you do withdraw your consent, we will no longer: 
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>process your application</li>
-        <li>make a decision on your application and any mandatory reconsideration or appeal you make</li>
+        <li>ask your health professionals to share information </li>
+        <li>view your NHS record</li>
       </ul>
 
       <p class="govuk-body">
-        The law allows us to obtain, keep and use this information.
+        Any information we have already received would still be stored and could be used.  
       </p>
 
       <p class="govuk-body">
-        DWP asks for your consent on behalf of your doctor or other relevant professionals you tell us about. This reassures your doctor and the others that
-      </p>
+      Your consent applies only to your current PIP application and any mandatory reconsideration or appeal you make.
+    </p>
      
 
 
   {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Save and continue",
-  href: "consent"
-}) }}
+  {{ govukButton({
+    text: "Save and continue",
+    href: "consent"
+  }) }}
 
-{% endblock %}
+  {% endblock %}

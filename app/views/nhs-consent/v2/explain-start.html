@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Explain test – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+  Start the test – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block containerStart %}
@@ -21,19 +21,18 @@
 
       {% call govukPanel({
         classes: "govuk-panel--interruption",
-        titleText: "We have skipped to the next stage of the application",
+        titleText: "Start",
         actions: {
           items: [
             {
-              text: "Continue the test",
-              href: "how-your-conditions-disabilities-affect-you",
+              text: "Start the test",
+              href: "before-you-start",
               type: "button"
             }
           ]
         }
       }) %}
-      <p class="govuk-body">Talk out loud and explain what you would enter in the boxes. Do not worry about filling them in.</p>
-
+      <!-- <p class="govuk-body"></p> -->
 {% endcall %}
 
 {% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="condition-details" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Your health condition or disability
+      </h1>
+
+      <p>Let us know about one condition or disability. You can add more later if you need to.</p>
+
+      <p>By condition or disability, we mean physical, sight, hearing or speech difficulties, learning, developmental or behavioural difficulties or mental health conditions.</p>
+
+      <p>If your condition is undiagnosed or you are waiting for a diagnosis, tell us what you think it is.</p>
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {{ govukInput({
+        label: {
+          text: "Name of condition or disability",
+          classes: "govuk-label--m",
+          isPageHeading: false
+        },
+        id: "event-name",
+        name: "eventName"
+      }) }}
+
+      
+
+      {{ govukInput({
+        label: {
+          text: "Approximate start date",
+          classes: "govuk-label--m",
+          isPageHeading: false
+        },
+        hint: {
+          text: "For example, about 14 months ago."
+        },
+        classes: "govuk-!-width-one-half",
+        id: "event-name",
+        name: "eventName"
+      }) }}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

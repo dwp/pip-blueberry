@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  How your health conditions or disabilities affect you – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block containerStart %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        How your health conditions or disabilities affect you
+      </h1>
+      
+      <p>This is stage 2 of your PIP claim. This stage is about your health conditions or disabilities and how they affect you.      </p>
+
+      <p>You will be asked questions about your ability to carry out everyday activities. Your answers will help us assess your entitlement to PIP. You can also upload evidence to support your claim. </p>
+
+      <p>Take your time and describe all the help you need. You do not have to answer all the questions in one go. You can save your progress at any point and continue later.</p>
+
+      <h2 class="govuk-heading-m">
+      Before you start
+      </h2>
+
+
+      <p class="govuk-body">You will need:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>details of your health conditions or disabilities </li>
+  <li>details of any medicines or treatments you have</li>
+  <li>your health and care professionals' contact details</li>
+</ul>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Start now",
+  href: "condition"
+}) }}
+
+{% endblock %}
