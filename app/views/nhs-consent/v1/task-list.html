@@ -195,3 +195,20 @@
     </div>
   </div>
 {% endblock %}
+{% block govukFooter %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "sharing-information",
+         text: "Consent screens"
+       },
+       {
+         href: "/manage-prototype/clear-data",
+         text: "Clear data"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+{% endblock %}

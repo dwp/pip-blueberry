@@ -20,7 +20,7 @@
         Your health or care professionals
       </h1>
 
-      <form class="form" action="/hcp-now-answer" method="post">
+      <form class="form" action="/hcp-now-answer-2" method="post">
 
       <p>You can tell us about 2 health or care professionals here. You can give more people's details in the next stage of your application if you want to.</p>
 
@@ -59,4 +59,21 @@
     </div>
   </div>
 
+{% endblock %}
+{% block govukFooter %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "sharing-information",
+         text: "Consent screens"
+       },
+       {
+         href: "/manage-prototype/clear-data",
+         text: "Clear data"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
 {% endblock %}

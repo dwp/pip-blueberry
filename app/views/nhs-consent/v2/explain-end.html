@@ -23,7 +23,24 @@
         classes: "govuk-panel--interruption",
         titleText: "The test is complete"
       }) %}
-      <p class="govuk-body">Go back to the User Testing instructions in your other tab and select 'Complete task'.</p>
+      <p class="govuk-body">Go back to the User Testing instructions and select 'Complete task'.</p>
 {% endcall %}
 
+{% endblock %}
+{% block govukFooter %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "sharing-information",
+         text: "Consent screens"
+       },
+       {
+         href: "/manage-prototype/clear-data",
+         text: "Clear data"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
 {% endblock %}

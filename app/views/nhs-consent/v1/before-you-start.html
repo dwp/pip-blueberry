@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main" %}
 
 {% block pageTitle %}
   Apply for Personal Independence Payment (PIP) – Personal Independence Payment (PIP) – GOV.UK Prototype Kit
@@ -55,4 +55,22 @@ You do not have to answer all the questions in one go. You can save your progres
   href: "explain-reg"
 }) }}
 
+{% endblock %}
+
+{% block govukFooter %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "sharing-information",
+         text: "Consent screens"
+       },
+       {
+         href: "/manage-prototype/clear-data",
+         text: "Clear data"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
 {% endblock %}

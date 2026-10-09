@@ -76,3 +76,20 @@ Tell us about the difficulties you have managing your treatments, and how you ma
   </div>
 
 {% endblock %}
+{% block govukFooter %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../sharing-information",
+         text: "Consent screens"
+       },
+       {
+         href: "/manage-prototype/clear-data",
+         text: "Clear data"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+{% endblock %}
